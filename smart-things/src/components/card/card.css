@@ -1,0 +1,7 @@
+.cardWrapper {
+    display: grid;
+    /*grid-template-rows: 1fr;*/
+    grid-auto-rows: 200px;
+    grid-row-gap: 40px;
+    /*grid-auto-columns: 50px;*/
+}

@@ -16,7 +16,7 @@ const CardItem = () => {
             <div className={'cardItemImg'}>
                 IMAGES
                 {/*<img style={{width: '90px', height: '100px'}} src={'/img/roobotVacuum.svg'}  alt="Vacuum"/>*/}
-                <img style={{width: '90px', height: '100px'}} src={require(`public/img/roobotVacuum.svg`).default}  alt="Vacuum"/>
+                <img style={{width: '90px', height: '100px'}} src={require(`../../../img/roobotVacuum.svg`)}  alt="Vacuum"/>
             </div>
             <div className={'cardItemStatus'}>
                 {/*<img src={rocket} alt="rocket"/>*/}
