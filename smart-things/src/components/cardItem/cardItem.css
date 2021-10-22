@@ -1,0 +1,152 @@
+.cardItemWrapper {
+    position: relative;
+    display: grid;
+    grid-template-areas: "online img"
+                         "title img"
+                         "status time";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    align-items: center;
+    align-self: center;
+    justify-items: center;
+    justify-self: center;
+
+    width: 300px;
+    /*height: 200px;*/
+    padding: 15px;
+
+    background: linear-gradient(180deg, #AB69FF 0%, #494BEB 100%);
+    border-radius: 20px;
+}
+
+.cardItemTitle {
+    grid-area: title;
+    justify-self: left;
+    width: 117px;
+    height: 56px;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    text-transform: uppercase;
+    color: #19212C;
+}
+
+.cardItemStatus {
+    grid-area: status;
+    justify-self: left;
+
+    width: 130px;
+    height: 27px;
+
+    background: #232198;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardItemStatusWork:before {
+    display: inline-block;
+    position: absolute;
+    content:'../../img/rocket.svg';
+    width: 12px;
+    height: 12px;
+    top: calc(50% - 6px);
+    left: -17px;
+    border-radius: 50%;
+    background: #00FF0A;
+}
+
+.cardItemStatusNoWork:before {
+    display: inline-block;
+    position: absolute;
+    content:'../../img/rocket.svg';
+    width: 12px;
+    height: 12px;
+    top: calc(50% - 6px);
+    left: -17px;
+    border-radius: 50%;
+    background: #00FF0A;
+}
+
+.cardItemStatus img {
+    float: left;
+    /*padding: 0 20px 20px 0;*/
+}
+
+.cardItemImg {
+    grid-area: img;
+    justify-self: right;
+}
+
+.cardItemOnlineWrapper {
+    grid-area: online;
+    justify-self: left;
+}
+
+.cardItemOnline {
+    position: relative;
+    left: 17px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    text-transform: uppercase;
+}
+.cardItemOnline:before {
+    display: inline-block;
+    position: absolute;
+    content:'';
+    width: 12px;
+    height: 12px;
+    top: calc(50% - 6px);
+    left: -17px;
+    border-radius: 50%;
+    background: #00FF0A;
+}
+
+.cardItemOffline {
+    position: relative;
+    grid-area: online;
+    justify-self: left;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    text-transform: uppercase;
+}
+
+.cardItemOffline:before {
+    display: inline-block;
+    position: absolute;
+    content:'';
+    width: 12px;
+    height: 12px;
+    top: calc(50% - 6px);
+    left: -17px;
+    border-radius: 50%;
+    background: #FF0000;
+}
+
+.cardItemTimeWrapper {
+    position: relative;
+    grid-area: time;
+    justify-self: right;
+}
+
+.cardItemTime {
+
+}
+.cardItemTime:before {
+    display: inline-block;
+    position: absolute;
+    content:url('../../img/Monochrome.svg');
+    width: 24px;
+    height: 24px;
+    top: calc(50% - 12px);
+    left: -26px;
+    border-radius: 50%;
+    background: #00FF0A;
+}
