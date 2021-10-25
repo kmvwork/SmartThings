@@ -3,9 +3,10 @@ import './header.css'
 
 const Header = ({title}) => {
     return (
-        <div className={'wrapper'}>
-           <h1 className={'title'}>{title}</h1>
-        </div>
+        <h1 className={'title'}>{title}</h1>
+        // <div className={'wrapper'}>
+        //
+        // </div>
     );
 };
 

@@ -1,18 +1,18 @@
 .cardItemWrapper {
+    box-sizing: border-box;
     position: relative;
     display: grid;
     grid-template-areas: "online img"
                          "title img"
                          "status time";
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 25px 125px 50px;
+    grid-template-columns: minmax(200px, 1fr) minmax(100px, 1fr);
+
     align-items: center;
     align-self: center;
     justify-items: center;
     justify-self: center;
 
-    width: 300px;
-    /*height: 200px;*/
     padding: 15px;
 
     background: linear-gradient(180deg, #AB69FF 0%, #494BEB 100%);
@@ -22,8 +22,8 @@
 .cardItemTitle {
     grid-area: title;
     justify-self: left;
-    width: 117px;
-    height: 56px;
+    /*width: 117px;*/
+    /*height: 56px;*/
 
     font-style: normal;
     font-weight: normal;
@@ -34,11 +34,10 @@
 }
 
 .cardItemStatus {
+    position: relative;
     grid-area: status;
     justify-self: left;
-
-    width: 130px;
-    height: 27px;
+    padding: 5px 15px 5px 40px;
 
     background: #232198;
     border-radius: 50px;
@@ -47,38 +46,23 @@
     align-items: center;
 }
 
-.cardItemStatusWork:before {
-    display: inline-block;
+.cardItemStatusImg {
     position: absolute;
-    content:'../../img/rocket.svg';
-    width: 12px;
-    height: 12px;
-    top: calc(50% - 6px);
-    left: -17px;
-    border-radius: 50%;
-    background: #00FF0A;
-}
-
-.cardItemStatusNoWork:before {
-    display: inline-block;
-    position: absolute;
-    content:'../../img/rocket.svg';
-    width: 12px;
-    height: 12px;
-    top: calc(50% - 6px);
-    left: -17px;
-    border-radius: 50%;
-    background: #00FF0A;
+    top: calc(50% - 9px);
+    left: 5px;
+    width: 17px;
+    height: 17px;
 }
 
 .cardItemStatus img {
     float: left;
-    /*padding: 0 20px 20px 0;*/
 }
 
 .cardItemImg {
     grid-area: img;
-    justify-self: right;
+    justify-self: center;
+    align-self: center;
+    /*margin: 0 auto;*/
 }
 
 .cardItemOnlineWrapper {
@@ -109,8 +93,7 @@
 
 .cardItemOffline {
     position: relative;
-    grid-area: online;
-    justify-self: left;
+    left: 17px;
     font-style: normal;
     font-weight: normal;
     font-size: 12px;
@@ -125,7 +108,7 @@
     width: 12px;
     height: 12px;
     top: calc(50% - 6px);
-    left: -17px;
+    left: -14px;
     border-radius: 50%;
     background: #FF0000;
 }
@@ -136,9 +119,6 @@
     justify-self: right;
 }
 
-.cardItemTime {
-
-}
 .cardItemTime:before {
     display: inline-block;
     position: absolute;
@@ -149,4 +129,8 @@
     left: -26px;
     border-radius: 50%;
     background: #00FF0A;
+}
+
+.trans {
+    transition: all 1.8s;
 }

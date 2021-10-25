@@ -1,0 +1,54 @@
+.app {
+    min-height: 100vh;
+    display: grid;
+    grid-template-areas:
+            '. header .'
+            '. main .'
+            'footer footer footer';
+    grid-template-columns: auto minmax(320px, 1200px) auto;
+    grid-template-rows: 70px 1fr minmax(70px, auto);
+    row-gap: 40px;
+}
+
+.header {
+    margin-top: 30px;
+    grid-area: header;
+
+}
+.main {
+    grid-area: main;
+    /**/
+    display: grid;
+    padding: 0 30px;
+    /*grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));*/
+    /*grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));*/
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    grid-template-rows: repeat(auto-fit, minmax(200px, auto));
+    align-content: start;
+    justify-content: center ;
+
+    column-gap: 40px;
+    row-gap: 40px;
+}
+.footer {
+    grid-area: footer;
+    background: linear-gradient(180deg, #AB69FF 0%, #494BEB 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btnUp {
+    position:fixed;
+    bottom:6%;
+    left:60%;
+    width: 30%;
+}
+
+/*@media (max-width:1200px) {*/
+/*   .btnUp {*/
+/*       width: 30%;*/
+/*       align-items: center;*/
+/*       display: flex;*/
+/*   }*/
+/*}*/
