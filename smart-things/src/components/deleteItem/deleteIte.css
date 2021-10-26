@@ -10,6 +10,7 @@
     left: 0;
     transform: scale(0);
     transition: .5s;
+    z-index: 1;
 }
 
 .modal.active {
@@ -47,12 +48,12 @@
     background: #FFFFFF;
 }
 
-.deleteItemText {
-    width: 210px;
-    min-height: 56px;
-    color: #19212C;
-}
-
 .deleteItemWrapperBtn {
     display: flex;
+}
+
+.deleteText {
+    width: 210px;
+    min-height: 56px;
+    color: black;
 }

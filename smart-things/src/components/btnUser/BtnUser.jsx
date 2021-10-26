@@ -1,10 +1,13 @@
 import React from 'react';
+
 import './btnUser.css'
 
-const BtnUser = (props) => {
+const BtnUser = ({color, text, action}) => {
     return (
-        <button className={'btnUser'} style={{backgroundColor:props.color}}>
-            {props.text}
+        <button
+            onClick={action}
+            className={'btnUser'} style={{backgroundColor: color}}>
+            {text}
         </button>
     );
 };

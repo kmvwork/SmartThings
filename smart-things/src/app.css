@@ -17,11 +17,8 @@
 }
 .main {
     grid-area: main;
-    /**/
     display: grid;
     padding: 0 30px;
-    /*grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));*/
-    /*grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));*/
     grid-template-columns: repeat(auto-fit, minmax(300px, auto));
     grid-template-rows: repeat(auto-fit, minmax(200px, auto));
     align-content: start;
@@ -44,11 +41,3 @@
     left:60%;
     width: 30%;
 }
-
-/*@media (max-width:1200px) {*/
-/*   .btnUp {*/
-/*       width: 30%;*/
-/*       align-items: center;*/
-/*       display: flex;*/
-/*   }*/
-/*}*/

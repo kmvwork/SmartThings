@@ -2,7 +2,7 @@
     box-sizing: border-box;
     position: relative;
     display: grid;
-    grid-template-areas: "online img"
+    grid-template-areas: "online delete"
                          "title img"
                          "status time";
     grid-template-rows: 25px 125px 50px;
@@ -22,8 +22,7 @@
 .cardItemTitle {
     grid-area: title;
     justify-self: left;
-    /*width: 117px;*/
-    /*height: 56px;*/
+    width: 160px;
 
     font-style: normal;
     font-weight: normal;
@@ -62,7 +61,6 @@
     grid-area: img;
     justify-self: center;
     align-self: center;
-    /*margin: 0 auto;*/
 }
 
 .cardItemOnlineWrapper {
@@ -79,10 +77,11 @@
     line-height: 14px;
     text-transform: uppercase;
 }
+
 .cardItemOnline:before {
     display: inline-block;
     position: absolute;
-    content:'';
+    content: '';
     width: 12px;
     height: 12px;
     top: calc(50% - 6px);
@@ -104,7 +103,7 @@
 .cardItemOffline:before {
     display: inline-block;
     position: absolute;
-    content:'';
+    content: '';
     width: 12px;
     height: 12px;
     top: calc(50% - 6px);
@@ -114,23 +113,39 @@
 }
 
 .cardItemTimeWrapper {
+    width: 100%;
+    text-align: center;
     position: relative;
     grid-area: time;
-    justify-self: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.cardItemTime:before {
-    display: inline-block;
-    position: absolute;
-    content:url('../../img/Monochrome.svg');
-    width: 24px;
-    height: 24px;
-    top: calc(50% - 12px);
-    left: -26px;
-    border-radius: 50%;
-    background: #00FF0A;
+.cardItemTime {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
 }
 
 .trans {
     transition: all 1.8s;
+}
+
+.deleteItemCard {
+    grid-area: delete;
+    color: #e32f2f;
+    background-color: #885FF8;
+    border-radius: 50px;
+    border: 1px solid grey;
+    cursor: pointer;
+    transition: .3s all;
+}
+
+.deleteItemCard:hover {
+    background-color: #541ee1;
 }

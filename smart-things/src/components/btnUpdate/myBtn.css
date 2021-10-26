@@ -15,9 +15,15 @@
     text-transform: uppercase;
 
     color: #000000;
+    cursor: pointer;
+    transition: .3s all;
 }
 
-.btnUpdateActiveWrapper{
+.btnUpdate:hover {
+    transform: scale(1.1);
+}
+
+.btnUpdateActiveWrapper {
     width: 50px !important;
     height: 50px !important;
 
