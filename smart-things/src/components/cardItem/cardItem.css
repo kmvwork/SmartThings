@@ -38,11 +38,19 @@
     justify-self: left;
     padding: 5px 15px 5px 40px;
 
-    background: #232198;
+    background: #A768FE;
     border-radius: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
 }
 
 .cardItemStatusImg {

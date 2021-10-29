@@ -1,12 +1,12 @@
 import React from 'react';
-import BtnUser from "../btnUser/BtnUser";
 import {useDispatch} from "react-redux";
 import {updateSmartThings} from "../../redux/smartThingsSlice";
 import {dataDBSmartThings} from "../../dataDB/dataDB";
 
 import './errorPage.css'
+import MyButton from "../ui/button/MyButton";
 
-const ErrorPage = ({active, setActive, text, error, background}) => {
+const ErrorPage = ({active, text, error, background}) => {
     const dispatch = useDispatch()
 
     const repeatRequest = () => {
@@ -19,7 +19,7 @@ const ErrorPage = ({active, setActive, text, error, background}) => {
                  onClick={event => event.stopPropagation()}>
                 <p className={'deleteItemText'}>{text + error}</p>
                 <div className={'deleteItemWrapperBtn'}>
-                    <BtnUser action={repeatRequest} type={'update'} text={'Повторить'} color={'#232198'}/>
+                    <MyButton text={'Повторить'} action={repeatRequest} style={'primary'}/>
                 </div>
             </div>
 

@@ -12,7 +12,7 @@ const Card = () => {
     useEffect(() => {
         setTimeout(() => {
             dispatch(loadedSmartThings())
-        }, 3000)
+        }, 3000) // fake waiting time for downloading from the server
     }, [loading])
 
     return (

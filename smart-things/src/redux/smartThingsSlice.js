@@ -15,6 +15,7 @@ export const smartThingsSlice = createSlice({
                     state.listSmartThings.push(item)
                 })
             } catch (e) {
+                state.error = true
                 throw new Error(e)
             }
         },
@@ -49,16 +50,17 @@ export const smartThingsSlice = createSlice({
             try {
                 state.loading = false
             } catch (e) {
+                state.error = true
                 throw new Error(e)
             }
         },
         deleteSmartThings: (state, action) => {
             try {
-                console.log(action.payload)
                 state.listSmartThings = state.listSmartThings.filter((item) => {
                     return item.id !== action.payload
                 })
             } catch (e) {
+                state.error = true
                 throw new Error(e)
             }
         }
